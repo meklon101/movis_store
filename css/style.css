@@ -1,0 +1,49 @@
+/* Base styles for the cinema app layout and dark theme. */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0b0d14, #151928 55%, #1d2438);
+    min-height: 100vh;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.poster-image {
+    height: 320px;
+    object-fit: cover;
+}
+
+.hero {
+    background: linear-gradient(90deg, rgba(255,193,7,0.15), rgba(248,249,250,0.05));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+}
+
+.btn-warning {
+    color: #111;
+    font-weight: 600;
+}
+
+.form-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+}
+
+.video-frame {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
