@@ -1,156 +1,347 @@
-# CineVerse – אתר קולנוע מקוון
+# 🎬 CineVerse - Online Cinema Management System
 
-## תיאור הפרויקט
-CineVerse הוא אתר קולנוע מקוון שפותח במסגרת קורס **מבוא לבדיקת חוסן WEB**.
+![PHP](https://img.shields.io/badge/PHP-8+-777BB4?style=flat\&logo=php\&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=flat\&logo=mysql\&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=flat\&logo=bootstrap\&logoColor=white)
 
-מטרת הפרויקט היא לאפשר למשתמשים להירשם למערכת, להתחבר לחשבון אישי, לעיין בקטלוג סרטים, לרכוש סרטים באמצעות יתרה וירטואלית, ולצפות רק בסרטים שנרכשו.
+## 📌 Project Overview
 
-הפרויקט פותח בשפת **PHP** ומשתמש במסד נתונים **MySQL** באמצעות **PDO**, תוך שימוש ב־HTML, CSS, JavaScript ו־Bootstrap 5.
+**CineVerse** is a web-based online cinema management and streaming system developed using **PHP and MySQL**.
 
----
+The system allows users to create accounts, browse available movies, purchase digital content, and watch purchased movies through a controlled access system.
 
-# מטרות המערכת
-המערכת כוללת את היכולות הבאות:
-
-- הרשמת משתמש חדש.
-- התחברות מאובטחת באמצעות אימייל וסיסמה.
-- הצגת קטלוג הסרטים הקיימים במערכת.
-- רכישת סרטים באמצעות יתרה וירטואלית.
-- צפייה בסרטים שנרכשו בלבד.
-- הצגת רשימת הסרטים שנרכשו.
-- הצגת היסטוריית רכישות.
-- ניהול פרופיל המשתמש.
+This project was developed as part of a **Web Development and Web Security course** and demonstrates backend development, database management, user authentication, session handling, and basic application security practices.
 
 ---
 
-# אופן פעולת האתר
+# 🚀 Main Features
 
-### הרשמה
-משתמש חדש נרשם באמצעות שם מלא, כתובת דואר אלקטרוני וסיסמה.
+## 👤 User Management
 
-לאחר ההרשמה:
-
-- נוצר חשבון חדש במסד הנתונים.
-- הסיסמה נשמרת בצורה מוצפנת.
-- לכל משתמש מוקצית יתרה התחלתית של **1000 ₪**.
-
----
-
-### התחברות
-לאחר ההתחברות למערכת:
-
-- נפתח Session עבור המשתמש.
-- המשתמש יכול לבצע רכישות.
-- ניתן לצפות בפרופיל האישי.
-- ניתן לצפות בהיסטוריית הרכישות.
-- ניתן לצפות רק בסרטים שנרכשו.
+* User registration and login system.
+* Secure password storage using password hashing.
+* Session-based authentication.
+* User profile management.
+* Personal movie library.
 
 ---
 
-### רכישת סרט
-בעת לחיצה על כפתור **רכישה**:
+## 🎞️ Movie Management
 
-המערכת בודקת:
-
-- האם המשתמש מחובר.
-- האם הסרט כבר נרכש בעבר.
-- האם קיימת יתרה מספקת.
-אם כל התנאים מתקיימים:
-
-- מחיר הסרט מופחת מהיתרה.
-- הרכישה נשמרת במסד הנתונים.
-- הסרט מתווסף לרשימת הסרטים של המשתמש.
+* Browse available movies.
+* View movie information and details.
+* Purchase movies using a virtual balance system.
+* Access purchased movies only.
+* Watch movies through an integrated player page.
 
 ---
 
-### צפייה בסרט
-כאשר המשתמש לוחץ על **צפייה**:
+## 💳 Purchase System
 
-המערכת בודקת האם הסרט נרכש.
-
-אם כן:
-
-יוצג נגן הווידאו.
-
-אם לא:
-
-תוצג הודעה שהסרט זמין לצפייה רק לאחר רכישה.
+* Virtual wallet balance.
+* Purchase validation.
+* Prevention of duplicate purchases.
+* Purchase history tracking.
+* User-specific purchased content.
 
 ---
 
-### users
-שומרת את נתוני המשתמשים:
+# 🔐 Security Features
 
+The project implements several security concepts:
 
-### movies
-שומרת את נתוני הסרטים:
-
-- מזהה סרט
-- שם הסרט
-- תיאור
-- קטגוריה
-- מחיר
-- תמונת פוסטר
-- קובץ וידאו
-
-### purchases
-שומרת את כל הרכישות שבוצעו במערכת:
-
-- מזהה רכישה
-- מזהה משתמש
-- מזהה סרט
-- מחיר הרכישה
-- תאריך הרכישה
+* PDO Prepared Statements to reduce SQL Injection risks.
+* Password hashing using PHP built-in security functions.
+* Session-based authorization.
+* Protected pages for authenticated users.
+* Server-side input validation.
+* Access control for purchased content.
 
 ---
 
-# אבטחת המערכת
-הפרויקט כולל מספר מנגנוני אבטחה:
+# 📸 Screenshots & Demo
 
-- הצפנת סיסמאות באמצעות Password Hashing.
-- שימוש ב־PDO עם Prepared Statements להגנה מפני SQL Injection.
-- ניהול Session עבור משתמשים מחוברים.
-- בדיקות הרשאה לפני צפייה בסרטים.
-- ולידציה של נתוני קלט בצד השרת.
-- מניעת גישה לעמודים הדורשים התחברות.
+Add screenshots of the system:
 
----
+## Homepage
 
-# התקנת הפרויקט
-
-1. יש להעתיק את תיקיית הפרויקט לתיקייה:
+*Add screenshot here*
 
 ```
-C:\xampp\htdocs\movis_store
+screenshots/homepage.png
 ```
 
-1. להפעיל את Apache ואת MySQL מתוך XAMPP.
-2. לפתוח את phpMyAdmin.
+---
 
+## Login Page
 
-1. לייבא את הקובץ:
+*Add screenshot here*
+
+```
+screenshots/login.png
+```
+
+---
+
+## Movie Catalog
+
+*Add screenshot here*
+
+```
+screenshots/movies.png
+```
+
+---
+
+## Movie Details & Purchase
+
+*Add screenshot here*
+
+```
+screenshots/movie-details.png
+```
+
+---
+
+## User Profile
+
+*Add screenshot here*
+
+```
+screenshots/profile.png
+```
+
+---
+
+## Movie Player
+
+*Add screenshot here*
+
+```
+screenshots/player.png
+```
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology  | Purpose                       |
+| ----------- | ----------------------------- |
+| PHP         | Backend development           |
+| MySQL       | Database management           |
+| PDO         | Secure database communication |
+| HTML5       | Page structure                |
+| CSS3        | Website styling               |
+| JavaScript  | Client-side functionality     |
+| Bootstrap 5 | Responsive design             |
+| XAMPP       | Local development environment |
+
+---
+
+# 📂 Project Structure
+
+```
+movis_store/
+
+│
+├── database/
+│   └── database.sql
+│
+├── includes/
+│   └── Database connection and shared components
+│
+├── css/
+│   └── Website stylesheets
+│
+├── js/
+│   └── JavaScript files
+│
+├── uploads/
+│   └── Movie images and media files
+│
+├── index.php
+├── login.php
+├── register.php
+├── movies.php
+├── movie.php
+├── purchase.php
+├── player.php
+├── profile.php
+├── history.php
+└── my_movies.php
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## Requirements
+
+Before running the project, install:
+
+* XAMPP
+* PHP 8+
+* MySQL
+* Web Browser
+
+---
+
+## Installation Steps
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/meklon101/movis_store.git
+```
+
+---
+
+### 2. Move the project
+
+Copy the project folder into:
+
+```
+C:\xampp\htdocs\
+```
+
+---
+
+### 3. Start XAMPP
+
+Run:
+
+* Apache
+* MySQL
+
+---
+
+### 4. Import Database
+
+Open:
+
+```
+http://localhost/phpmyadmin
+```
+
+Create/import the database using:
 
 ```
 database/database.sql
 ```
 
-
 ---
 
-# הפעלת האתר
- יש לפתוח בדפדפן:
+### 5. Configure Database Connection
+
+Update your database settings inside the configuration file according to your local environment.
+
+Example:
 
 ```
-http://127.0.0.1/movis_store/
+Database name:
+online_cinema
 ```
 
 ---
 
+### 6. Run the Project
+
+Open:
+
+```
+http://localhost/movis_store/
+```
 
 ---
 
-# סיכום
-פרויקט זה מדגים פיתוח מערכת Web מלאה באמצעות PHP ו־MySQL, הכוללת ניהול משתמשים, התחברות מאובטחת, עבודה מול מסד נתונים, ניהול רכישות והרשאות גישה לתוכן, תוך יישום עקרונות בסיסיים של אבטחת יישומי Web.
-"# movis_store" 
-"# movis_store" 
-"# movis_store" 
+# 🗄️ Database Design
+
+The system uses a MySQL relational database.
+
+Main tables:
+
+## Users Table
+
+Stores user information:
+
+* User ID
+* Username
+* Email
+* Password Hash
+* Account Balance
+
+---
+
+## Movies Table
+
+Stores movie information:
+
+* Movie ID
+* Title
+* Description
+* Category
+* Price
+* Poster
+* Video Information
+
+---
+
+## Purchases Table
+
+Stores user transactions:
+
+* Purchase ID
+* User ID
+* Movie ID
+* Purchase Date
+* Purchase Price
+
+---
+
+# 🏗️ Application Flow
+
+```
+User
+ |
+ |---- Register / Login
+ |
+PHP Application
+ |
+ |---- Authentication
+ |---- Authorization
+ |---- Movie Management
+ |---- Purchase System
+ |
+PDO
+ |
+MySQL Database
+```
+
+---
+
+# 🔮 Future Improvements
+
+Possible improvements:
+
+* Admin dashboard.
+* Online payment integration.
+* Advanced user roles.
+* Improved file upload security.
+* REST API implementation.
+* Docker deployment.
+* Automated testing.
+
+---
+
+# 👨‍💻 Author
+
+**meklon101**
+
+GitHub:
+https://github.com/meklon101
+
+---
+
+# 📄 License
+
+This project was created for educational purposes.
