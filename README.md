@@ -68,11 +68,6 @@ Add screenshots of the system:
 <img src="screenshots/homepage.png" width="450">
 
 ---
-## Register
-
-<img src="screenshots/Register.png" width="450">
-
----
 
 ## Login Page
 
@@ -83,12 +78,6 @@ Add screenshots of the system:
 ## Movie Details & Purchase
 
 <img src="screenshots/movie-details.png" width="450">
-
----
-
-## User Profile
-
-<img src="screenshots/profile.png" width="450">
 
 ---
 
@@ -117,33 +106,40 @@ Add screenshots of the system:
 
 ```
 movis_store/
-
+│
+├── css/
+│   └── style.css
 │
 ├── database/
 │   └── database.sql
 │
 ├── includes/
-│   └── Database connection and shared components
-│
-├── css/
-│   └── Website stylesheets
+│   ├── auth.php
+│   ├── db.php
+│   ├── footer.php
+│   ├── functions.php
+│   └── header.php
 │
 ├── js/
-│   └── JavaScript files
+│   └── main.js
+│
+├── screenshots/
+│   └── [System Screenshots]
 │
 ├── uploads/
-│   └── Movie images and media files
+│   ├── posters/
+│   └── videos/
 │
 ├── index.php
-├── login.php
-├── register.php
 ├── movies.php
 ├── movie.php
 ├── purchase.php
-├── player.php
-├── profile.php
+├── my_movies.php
 ├── history.php
-└── my_movies.php
+├── profile.php
+├── login.php
+├── register.php
+└── README.md
 ```
 
 ---
