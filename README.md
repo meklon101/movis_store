@@ -65,61 +65,36 @@ Add screenshots of the system:
 
 ## Homepage
 
-*Add screenshot here*
+<img src="screenshots/homepage.png" width="450">
 
-```
-screenshots/homepage.png
-```
+---
+## Register
+
+<img src="screenshots/Register.png" width="450">
 
 ---
 
 ## Login Page
 
-*Add screenshot here*
-
-```
-screenshots/login.png
-```
-
----
-
-## Movie Catalog
-
-*Add screenshot here*
-
-```
-screenshots/movies.png
-```
+<img src="screenshots/login.png" width="450">
 
 ---
 
 ## Movie Details & Purchase
 
-*Add screenshot here*
-
-```
-screenshots/movie-details.png
-```
+<img src="screenshots/movie-details.png" width="450">
 
 ---
 
 ## User Profile
 
-*Add screenshot here*
-
-```
-screenshots/profile.png
-```
+<img src="screenshots/profile.png" width="450">
 
 ---
 
 ## Movie Player
 
-*Add screenshot here*
-
-```
-screenshots/player.png
-```
+<img src="screenshots/player.png" width="450">
 
 ---
 
