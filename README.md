@@ -307,9 +307,7 @@ Possible improvements:
 # 👨‍💻 Author
 
 **meklon101**
-
-GitHub:
-https://github.com/meklon101
+- GitHub: [meklon101](https://github.com/meklon101)
 
 ---
 
